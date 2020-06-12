@@ -64,5 +64,15 @@ pipeline {
           Naresh''', cc: '', from: '', replyTo: '', subject: 'jenkins Build Report ', to: 'dadp045@gmail.com'
         }
     }
+    stage ('slack notification') {
+      steps {
+          slackSend baseUrl: 'https://hooks.slack.com/services/',
+            channel: 'report successful', 
+            message: 'good', 
+            teamDomain: '#devsecops', 
+            tokenCredentialId: 'slack-devsecops', 
+            username: 'education'
+        }
+    }
    } 
  }
