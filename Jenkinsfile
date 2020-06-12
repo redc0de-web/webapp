@@ -57,5 +57,10 @@ pipeline {
         }
       }
     }
+    stage (''Notification mail'){
+           mail bcc: '', body: '''Hi there ! this is your report 
+           Thanks
+           Naresh''', cc: '', from: '', replyTo: '', subject: 'jenkins Build Report ', to: 'dadp045@gmail.com'
+    }
    } 
  }
