@@ -57,7 +57,7 @@ pipeline {
         }
       }
     }
-    stage ('Notification mail'){
+    stage ('Notification mail') {
       steps {
           mail bcc: '', body: '''Hi there ! this is your report 
           Thanks
